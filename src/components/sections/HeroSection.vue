@@ -4,36 +4,27 @@
       <div class="hero-content">
         <div class="hero-text fade-in-up">
           <h1 class="hero-title">
-            Мощный SDK для
-            <span class="text-gradient">современной разработки</span>
+            Turn any app into <br /> a Web3 yield engine
           </h1>
           <p class="hero-description">
-            Mycelium SDK объединяет лучшие технологии - Vue.js, TypeScript и Vite - 
-            в едином решении для создания быстрых, масштабируемых веб-приложений.
+            Drop in our SDK and let your users earn with DeFi. <br /> No wallets. No jargon. No headaches.
           </p>
           <div class="hero-buttons">
-            <a href="#features" class="btn btn-primary">Начать работу</a>
-            <a href="#about" class="btn btn-secondary">Узнать больше</a>
+            <a href="#features" class="btn btn-primary">Check demo</a>
+            <a href="https://docs.mycelium.sh" class="btn btn-secondary" target="_blank">Read docs</a>
           </div>
+          <span class="secondary-text"> MIT-licensed core. Premium add-ons available. </span>
         </div>
         <div class="hero-visual fade-in-up">
           <div class="code-preview">
-            <div class="code-header">
-              <div class="code-dots">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-              </div>
-              <span class="code-title">main.ts</span>
-            </div>
             <div class="code-content">
-              <pre><code>import { createApp } from 'vue'
-import { createRouter } from 'vue-router'
-import App from './App.vue'
+              <pre><code class="language-typescript">import { MyceliumSDK } from "@mycelium-sdk/core";
 
-const app = createApp(App)
-app.use(router)
-app.mount('#app')</code></pre>
+const sdk = new MyceliumSDK({...});
+
+const wallet = await sdk.wallet.createWallet("andrew@designer.com");
+
+await wallet.earn("100");</code></pre>
             </div>
           </div>
         </div>
@@ -43,44 +34,63 @@ app.mount('#app')</code></pre>
 </template>
 
 <script setup lang="ts">
-// Hero секция не требует дополнительной логики
+import { onMounted } from 'vue'
+import hljs from 'highlight.js/lib/core'
+import typescript from 'highlight.js/lib/languages/typescript'
+import 'highlight.js/styles/github-dark.css'
+
+onMounted(() => {
+  hljs.registerLanguage('typescript', typescript)
+  hljs.highlightAll()
+})
 </script>
 
 <style scoped>
 .hero {
   padding: 120px 0 80px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: radial-gradient(53.41% 59.46% at 50% 0%, #6ADCFF 0%, #2E025D 68.75%, rgba(0, 0, 0, 0) 100%), #000000;
+  height: 803px;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  opacity: 1;
 }
 
 .hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
   gap: 4rem;
   align-items: center;
+  text-align: center;
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
+  font-size: 56px;
+  font-weight: 600;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  color: #1a1a1a;
+  color: #f8fafc;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
 }
 
 .hero-description {
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 18px;
+  color: #cbd5e1;
   line-height: 1.6;
   margin-bottom: 2.5rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
 }
 
 .hero-buttons {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-bottom: 0.5rem;
 }
 
 .hero-visual {
@@ -88,12 +98,18 @@ app.mount('#app')</code></pre>
   justify-content: center;
 }
 
+.hljs {
+  background: transparent;
+}
+
 .code-preview {
-  background: #1e1e1e;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  box-shadow: 0px 0px 20px 0px rgba(119, 0, 255, 0.1) inset;
+  text-align: left;
+border: 0.5px solid rgba(255, 255, 255, 0.1);
+  max-width: 700px;
   width: 100%;
 }
 
@@ -105,28 +121,6 @@ app.mount('#app')</code></pre>
   gap: 12px;
 }
 
-.code-dots {
-  display: flex;
-  gap: 6px;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-}
-
-.dot.red {
-  background: #ff5f56;
-}
-
-.dot.yellow {
-  background: #ffbd2e;
-}
-
-.dot.green {
-  background: #27ca3f;
-}
 
 .code-title {
   color: #fff;
@@ -134,13 +128,9 @@ app.mount('#app')</code></pre>
   font-weight: 500;
 }
 
-.code-content {
-  padding: 20px;
-  background: #1e1e1e;
-}
+
 
 .code-content pre {
-  margin: 0;
   font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
   font-size: 14px;
   line-height: 1.5;

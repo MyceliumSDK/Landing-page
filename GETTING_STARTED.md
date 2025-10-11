@@ -1,58 +1,58 @@
-# Быстрый старт
+# Quick Start
 
-## Установка и запуск
+## Installation and Setup
 
-1. **Установите зависимости:**
+1. **Install dependencies:**
 ```bash
 npm install
 ```
 
-2. **Запустите сервер разработки:**
+2. **Start development server:**
 ```bash
 npm run dev
 ```
 
-3. **Откройте браузер:**
-Перейдите по адресу [http://localhost:3000](http://localhost:3000)
+3. **Open browser:**
+Navigate to [http://localhost:3000](http://localhost:3000)
 
-## Доступные команды
+## Available Commands
 
-- `npm run dev` - Запуск сервера разработки
-- `npm run build` - Сборка для продакшена
-- `npm run preview` - Предварительный просмотр сборки
-- `npm run type-check` - Проверка типов TypeScript
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run type-check` - TypeScript type checking
 
-## Структура проекта
+## Project Structure
 
 ```
 ├── src/
-│   ├── components/          # Компоненты
-│   │   ├── Header.vue      # Шапка
-│   │   ├── Footer.vue      # Подвал
-│   │   └── sections/       # Секции лендинга
-│   ├── views/              # Страницы
-│   │   ├── Home.vue        # Главная
-│   │   ├── About.vue       # О нас
-│   │   └── Contact.vue     # Контакты
-│   ├── App.vue             # Корневой компонент
-│   ├── main.ts             # Точка входа
-│   └── style.css           # Стили
-├── index.html              # HTML шаблон
-├── vite.config.ts          # Конфигурация Vite
-├── tsconfig.json           # Конфигурация TypeScript
-└── package.json            # Зависимости
+│   ├── components/          # Components
+│   │   ├── Header.vue      # Header
+│   │   ├── Footer.vue      # Footer
+│   │   └── sections/       # Landing sections
+│   ├── views/              # Pages
+│   │   ├── Home.vue        # Home page
+│   │   ├── About.vue       # About page
+│   │   └── Contact.vue     # Contact page
+│   ├── App.vue             # Root component
+│   ├── main.ts             # Entry point
+│   └── style.css           # Styles
+├── index.html              # HTML template
+├── vite.config.ts          # Vite configuration
+├── tsconfig.json           # TypeScript configuration
+└── package.json            # Dependencies
 ```
 
-## Особенности
+## Features
 
-✅ **Vue 3** с Composition API  
-✅ **TypeScript** для типобезопасности  
-✅ **Vue Router** для навигации  
-✅ **Vite** для быстрой сборки  
-✅ **Адаптивный дизайн**  
-✅ **Современные анимации**  
-✅ **SEO-оптимизация**  
+✅ **Vue 3** with Composition API  
+✅ **TypeScript** for type safety  
+✅ **Vue Router** for navigation  
+✅ **Vite** for fast building  
+✅ **Responsive design**  
+✅ **Modern animations**  
+✅ **SEO optimization**  
 
-## Готово к использованию!
+## Ready to Use!
 
-Проект полностью настроен и готов к разработке. Все компоненты созданы, маршруты настроены, стили применены.
+The project is fully configured and ready for development. All components are created, routes are set up, and styles are applied.
