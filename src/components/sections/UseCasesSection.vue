@@ -1,19 +1,15 @@
 <template>
-  <section class="use-cases">
+  <section class="section">
     <div class="container">
-      <div>
-        <h2 class="section-title">Use Cases</h2>
-      </div>
+      <h2 class="section-title">Use Cases</h2>
       
-      <div class="use-cases-grid">
-        <div class="use-case-card fade-in-up" v-for="useCase in useCases" :key="useCase.id">
+      <div class="grid-3">
+        <div class="card fade-in-up" v-for="useCase in useCases" :key="useCase.id">
           <div class="use-case-icon">
             <div v-html="useCase.icon"></div>
           </div>
-          <div class="use-case-content">
-            <h3 class="use-case-title">{{ useCase.title }}</h3>
-            <p class="use-case-description">{{ useCase.description }}</p>
-          </div>
+          <h3 class="card-title">{{ useCase.title }}</h3>
+          <p class="card-description">{{ useCase.description }}</p>
         </div>
       </div>
     </div>
@@ -56,98 +52,19 @@ const useCases = [
 </script>
 
 <style scoped>
-.use-cases {
-  padding: 80px 0;
-  background: #000000;
-}
-
-.section-subtitle {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.6);
-  max-width: 600px;
-  margin: 0 auto;
-  font-family: 'Inter', sans-serif;
-}
-
-.use-cases-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.use-case-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0px 0px 20px 0px rgba(119, 0, 255, 0.1) inset;
-  transition: all 0.3s ease;
-  border: 0.5px solid rgba(255, 255, 255, 0.1);
+.card {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.use-case-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0px 0px 30px 0px rgba(119, 0, 255, 0.2) inset;
-  border: 0.5px solid rgba(119, 0, 255, 0.3);
-}
-
 .use-case-icon {
-  color: #7700ff;
+  color: #fff;
   opacity: 0.7;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.use-case-content {
-  flex: 1;
-}
-
-.use-case-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #f8fafc;
-  margin-bottom: 1rem;
-  font-family: 'Inter', sans-serif;
-}
-
-.use-case-description {
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.6;
-  font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .use-cases {
-    padding: 60px 0;
-  }
-  
-  .use-cases-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .use-case-card {
-    padding: 2rem;
-  }
-  
-  .use-case-title {
-    font-size: 1.1rem;
-  }
-  
-  .use-case-description {
-    font-size: 0.9rem;
-  }
 }
 </style>

@@ -10,8 +10,8 @@
             Drop in our SDK and let your users earn with DeFi. <br /> No wallets. No jargon. No headaches.
           </p>
           <div class="hero-buttons">
-            <a href="#features" class="btn btn-primary">Check demo</a>
-            <a href="https://docs.mycelium.sh" class="btn btn-secondary" target="_blank">Read docs</a>
+            <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary">Check demo</a>
+            <a :href="$constants.DOCS_MYCELIUM_SDK" class="btn btn-secondary" target="_blank">Read docs</a>
           </div>
           <span class="secondary-text"> MIT-licensed core. Premium add-ons available. </span>
         </div>
@@ -34,7 +34,7 @@ await wallet.earn("100");</code></pre>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, nextTick } from 'vue'
 import hljs from 'highlight.js/lib/core'
 import typescript from 'highlight.js/lib/languages/typescript'
 import 'highlight.js/styles/github-dark.css'
@@ -42,19 +42,22 @@ import 'highlight.js/styles/github-dark.css'
 onMounted(() => {
   hljs.registerLanguage('typescript', typescript)
   hljs.highlightAll()
+
+  nextTick(() => {
+    hljs.highlightAll()
+  })
 })
 </script>
 
 <style scoped>
 .hero {
   padding: 120px 0 80px;
-  background: radial-gradient(53.41% 59.46% at 50% 0%, #6ADCFF 0%, #2E025D 68.75%, rgba(0, 0, 0, 0) 100%), #000000;
+  background: radial-gradient(53.41% 59.46% at 50% 0%, #6ADCFF 0%, #2E025D 68.75%, rgba(0, 0, 0, 0) 100%), var(--primary-bg);
   height: 803px;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
 }
 
 .hero-content {
@@ -71,18 +74,16 @@ onMounted(() => {
   font-weight: 600;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  color: #f8fafc;
-  text-align: center;
-  font-family: 'Inter', sans-serif;
+  color: var(--text-primary);
+  font-family: var(--font-family);
 }
 
 .hero-description {
   font-size: 18px;
-  color: #cbd5e1;
+  color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 2.5rem;
-  text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family);
 }
 
 .hero-buttons {
@@ -103,32 +104,34 @@ onMounted(() => {
 }
 
 .code-preview {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0px 0px 20px 0px rgba(119, 0, 255, 0.1) inset;
+  box-shadow: var(--card-shadow);
   text-align: left;
-border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border: 0.5px solid var(--border-color);
   max-width: 700px;
   width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(119, 0, 255, 0.3) transparent;
 }
 
-.code-header {
-  background: #2d2d2d;
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.code-preview::-webkit-scrollbar {
+  height: 6px;
 }
 
-
-.code-title {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
+.code-preview::-webkit-scrollbar-track {
+  background: transparent;
 }
 
+.code-preview::-webkit-scrollbar-thumb {
+  background: rgba(119, 0, 255, 0.3);
+  border-radius: 3px;
+}
 
+.code-preview::-webkit-scrollbar-thumb:hover {
+  background: rgba(119, 0, 255, 0.5);
+}
 
 .code-content pre {
   font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
@@ -143,29 +146,67 @@ border: 0.5px solid rgba(255, 255, 255, 0.1);
 
 @media (max-width: 768px) {
   .hero {
-    padding: 100px 0 60px;
-    text-align: center;
+    padding: 80px 0 40px;
+    height: auto;
   }
   
   .hero-content {
-    grid-template-columns: 1fr;
     gap: 2rem;
+    margin-top: 1rem;
   }
   
   .hero-title {
     font-size: 2.5rem;
+    line-height: 1.2;
   }
   
   .hero-description {
-    font-size: 1rem;
+    font-size: 16px;
   }
   
   .hero-buttons {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 280px;
   }
   
   .code-preview {
-    max-width: 100%;
+    max-width: calc(100vw - 2rem);
+    margin: 0 1rem;
+    overflow-x: auto;
+  }
+  
+  .code-content pre {
+    font-size: 12px;
+    padding: 0.75rem;
+    overflow-x: auto;
+    white-space: pre;
+    min-width: max-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-description {
+    font-size: 14px;
+  }
+  
+  .code-preview {
+    max-width: calc(100vw - 1.5rem);
+    margin: 0 0.5rem;
+  }
+  
+  .code-content pre {
+    font-size: 11px;
+    padding: 0.5rem;
   }
 }
 </style>

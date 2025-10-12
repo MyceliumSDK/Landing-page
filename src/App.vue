@@ -17,6 +17,8 @@ import Header from './components/Header.vue'
 #app {
   display: flex;
   flex-direction: column;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 main {

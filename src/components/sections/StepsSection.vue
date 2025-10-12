@@ -1,11 +1,11 @@
 <template>
-  <section class="steps">
+  <section class="section">
     <div class="container">
       <h2 class="section-title">How to use Mycelium SDK</h2>
-      <div class="steps-grid">
-        <div class="stat-item fade-in-up" v-for="step in steps" :key="step.id">
-          <div class="step-title">{{ step.title }}</div>
-          <div class="step-description">{{ step.description }}</div>
+      <div class="grid-3">
+        <div class="card fade-in-up" v-for="step in steps" :key="step.id">
+          <h3 class="card-title">{{ step.title }}</h3>
+          <p class="card-description">{{ step.description }}</p>
         </div>
       </div>
     </div>
@@ -36,63 +36,19 @@ const steps = [
 </script>
 
 <style scoped>
-.steps {
-  padding: 80px 0;
-  color: white;
-}
-
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+.card {
   text-align: center;
 }
 
-.step-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.step-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+.card-title {
   background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.step-description {
-  margin-top: .5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .steps {
-    padding: 60px 0;
-  }
-  
-  .steps-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-  
-  .step-title {
-    font-size: 2.5rem;
-  }
-  
-  .step-description {
-    font-size: 1rem;
-  }
-}
-
 @media (max-width: 480px) {
-  .steps-grid {
+  .grid-3 {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }

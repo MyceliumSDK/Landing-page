@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import './style.css'
+import * as constants from './constants'
 
 import Home from './views/Home.vue'
 
@@ -16,4 +17,7 @@ const router = createRouter({
 
 const app = createApp(App)
 app.use(router)
+
+app.config.globalProperties.$constants = constants;
+
 app.mount('#app')
