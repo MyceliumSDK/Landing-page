@@ -67,7 +67,7 @@ onUnmounted(() => {
 
 .brand-text {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 700;
   color: #fff;
   transition: all 0.3s ease;
 }
@@ -89,6 +89,7 @@ onUnmounted(() => {
 
 .nav-link:hover {
   scale: 1.1;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
