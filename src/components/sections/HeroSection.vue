@@ -4,16 +4,27 @@
       <div class="hero-content">
         <div class="hero-text fade-in-up">
           <h1 class="hero-title">
-            Turn any app into <br /> a Web3 yield engine
+            DeFi yield in your app <br />
+            in minutes
           </h1>
           <p class="hero-description">
-            Drop in our SDK and let your users earn with DeFi. <br /> No wallets. No jargon. No headaches.
+            Let your users earn from Web3 without ever touching Web3. <br />
+            Simple integration, real yield, zero complexity
           </p>
           <div class="hero-buttons">
-            <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary">Check demo</a>
-            <a :href="$constants.DOCS_MYCELIUM_SDK" class="btn btn-secondary" target="_blank">Read docs</a>
+            <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary"
+              >Check demo</a
+            >
+            <a
+              :href="$constants.DOCS_MYCELIUM_SDK"
+              class="btn btn-secondary"
+              target="_blank"
+              >Read docs</a
+            >
           </div>
-          <span class="secondary-text"> MIT-licensed core. Premium add-ons available. </span>
+          <span class="secondary-text">
+            Open source core. Premium add-ons available
+          </span>
         </div>
         <div class="hero-visual fade-in-up">
           <div class="code-preview">
@@ -34,25 +45,31 @@ await wallet.earn("100");</code></pre>
 </template>
 
 <script setup lang="ts">
-import { onMounted, nextTick } from 'vue'
-import hljs from 'highlight.js/lib/core'
-import typescript from 'highlight.js/lib/languages/typescript'
-import 'highlight.js/styles/github-dark.css'
+import { onMounted, nextTick } from "vue";
+import hljs from "highlight.js/lib/core";
+import typescript from "highlight.js/lib/languages/typescript";
+import "highlight.js/styles/github-dark.css";
 
 onMounted(() => {
-  hljs.registerLanguage('typescript', typescript)
-  hljs.highlightAll()
+  hljs.registerLanguage("typescript", typescript);
+  hljs.highlightAll();
 
   nextTick(() => {
-    hljs.highlightAll()
-  })
-})
+    hljs.highlightAll();
+  });
+});
 </script>
 
 <style scoped>
 .hero {
   padding: 120px 0 80px;
-  background: radial-gradient(53.41% 59.46% at 50% 0%, #6ADCFF 0%, #2E025D 68.75%, rgba(0, 0, 0, 0) 100%), var(--primary-bg);
+  background: radial-gradient(
+      53.41% 59.46% at 50% 0%,
+      #6adcff 0%,
+      #2e025d 68.75%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    var(--primary-bg);
   height: 803px;
   min-height: 100vh;
   display: flex;
@@ -134,7 +151,7 @@ onMounted(() => {
 }
 
 .code-content pre {
-  font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  font-family: "Fira Code", "Monaco", "Consolas", monospace;
   font-size: 14px;
   line-height: 1.5;
   color: #d4d4d4;
@@ -149,38 +166,38 @@ onMounted(() => {
     padding: 80px 0 40px;
     height: auto;
   }
-  
+
   .hero-content {
     gap: 2rem;
     margin-top: 1rem;
   }
-  
+
   .hero-title {
     font-size: 2.5rem;
     line-height: 1.2;
   }
-  
+
   .hero-description {
     font-size: 16px;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
   }
-  
+
   .btn {
     width: 100%;
     max-width: 280px;
   }
-  
+
   .code-preview {
     max-width: calc(100vw - 2rem);
     margin: 0 1rem;
     overflow-x: auto;
   }
-  
+
   .code-content pre {
     font-size: 12px;
     padding: 0.75rem;
@@ -194,16 +211,16 @@ onMounted(() => {
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .hero-description {
     font-size: 14px;
   }
-  
+
   .code-preview {
     max-width: calc(100vw - 1.5rem);
     margin: 0 0.5rem;
   }
-  
+
   .code-content pre {
     font-size: 11px;
     padding: 0.5rem;

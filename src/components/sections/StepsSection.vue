@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
-      <h2 class="section-title">How to use Mycelium SDK</h2>
+      <h2 class="section-title">How it works?</h2>
       <div class="grid-3">
         <div class="card fade-in-up" v-for="step in steps" :key="step.id">
           <h3 class="card-title">{{ step.title }}</h3>
@@ -13,26 +13,24 @@
 </template>
 
 <script setup lang="ts">
-
 const steps = [
   {
     id: 1,
-    title: '1. Install the Myceleium SDK',
-    description: 'Use one command to get a quick access: pnpm add @mycelium-sdk/core'
+    title: "1. Install the SDK",
+    description: "Install the SDK: pnpm add @mycelium-sdk/core",
   },
   {
     id: 2,
-    title: '2. Set config and yield conditions',
-    description: 'Define all necessary SDK and yield settings or use default ones'
+    title: "2. Set SDK settings",
+    description:
+      "Define all necessary SDK and yield settings or use default ones",
   },
   {
     id: 3,
-    title: '3. Quick gateway to web3  ',
-    description: 'One call to create/retrieve a user wallet, one call to start earn yield for a user. Withdraw anytime'
+    title: "3. Start earning",
+    description: "Let a user top up his wallet and start earning yield",
   },
-]
-
-
+];
 </script>
 
 <style scoped>
