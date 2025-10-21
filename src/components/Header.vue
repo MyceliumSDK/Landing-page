@@ -12,15 +12,15 @@
       <a :href="$constants.DOCS_MYCELIUM_SDK" class="nav-link">Docs</a>
     </div>
     <div>
-      <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary"
-        >Check demo</a
-      >
+      <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary">
+        Check demo
+      </a>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from "vue";
+import { onMounted, onUnmounted, ref } from 'vue';
 
 const isScrolled = ref(false);
 
@@ -29,11 +29,11 @@ const handleScroll = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener('scroll', handleScroll);
 });
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
+  window.removeEventListener('scroll', handleScroll);
 });
 </script>
 
@@ -55,7 +55,9 @@ onUnmounted(() => {
   backdrop-filter: blur(50px) saturate(200%) brightness(80%);
   -webkit-backdrop-filter: blur(50px) saturate(200%) brightness(80%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.2),
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 4px 16px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1),
     inset 0 -1px 0 rgba(255, 255, 255, 0.05);
 }

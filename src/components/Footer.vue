@@ -1,8 +1,6 @@
 <template>
   <footer class="footer">
     <div class="container">
-
-      
       <div class="footer-bottom">
         <p class="footer-copyright">
           © 2024 Mycelium SDK. All rights reserved.
@@ -125,13 +123,13 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .footer-bottom {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
   }
-  
+
   .footer-legal {
     flex-direction: column;
     gap: 0.5rem;

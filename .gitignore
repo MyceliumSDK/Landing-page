@@ -89,3 +89,4 @@ tmp/
 temp/
 
 bun.lock
+.vercel

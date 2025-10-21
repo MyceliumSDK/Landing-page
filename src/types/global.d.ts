@@ -1,9 +1,9 @@
-import * as constants from '../constants'
+import * as constants from '../constants';
 
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
-    $constants: typeof constants
+    $constants: typeof constants;
   }
 }
 
-export {}
+export {};
