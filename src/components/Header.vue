@@ -114,4 +114,8 @@ onUnmounted(() => {
   scale: 0.8;
   padding: 0.5rem 1rem;
 }
+
+.btn-primary:hover {
+  scale: 0.85;
+}
 </style>

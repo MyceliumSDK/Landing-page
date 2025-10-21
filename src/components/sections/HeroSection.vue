@@ -14,7 +14,7 @@
             Simple integration, real yield, zero complexity
           </p>
           <div class="hero-buttons">
-            <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary">
+            <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary" target="_blank">
               Try demo
             </a>
             <a
