@@ -34,7 +34,7 @@ const features = [
     id: 1,
     title: 'Smart yield routing',
     description:
-      'Mycelium\'s protocol router automatically finds the best yield opportunities across supported Web3 protocols — so your users earn more, effortlessly.',
+      "Mycelium's protocol router automatically finds the best yield opportunities across supported Web3 protocols — so your users earn more, effortlessly.",
   },
   {
     id: 2,

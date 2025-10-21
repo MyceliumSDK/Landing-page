@@ -105,17 +105,14 @@ import { CODE_HERO_SECTION } from '@/constants';
   background: transparent !important;
   text-align: left !important;
   border-radius: 16px !important;
-   border-radius: 20px;
-    background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(30px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
-  border: .5px solid transparent;
+  border: 0.5px solid transparent;
 
   background-image:
-    linear-gradient(
-      rgba(255, 255, 255, 0.05), 
-      rgba(255, 255, 255, 0.05)
-    ),
+    linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)),
     linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.5) 0%,
@@ -180,7 +177,8 @@ import { CODE_HERO_SECTION } from '@/constants';
     height: auto;
     min-height: 100vh;
 
-    background: radial-gradient(
+    background:
+      radial-gradient(
         80% 80% at 50% -30%,
         #6adcff 0%,
         #2e025d 70%,
@@ -220,7 +218,6 @@ import { CODE_HERO_SECTION } from '@/constants';
   }
 
   .btn {
-
     max-width: 260px;
   }
 
@@ -263,5 +260,4 @@ import { CODE_HERO_SECTION } from '@/constants';
     margin-top: 1rem;
   }
 }
-
 </style>

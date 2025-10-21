@@ -9,4 +9,9 @@ const w = await sdk.wallet.createWallet("user@mail.com");
 await w.earn("100");
 `;
 
-export { GITHUB_MYCELIUM_SDK, DEMO_MYCELIUM_SDK, DOCS_MYCELIUM_SDK, CODE_HERO_SECTION };
+export {
+  GITHUB_MYCELIUM_SDK,
+  DEMO_MYCELIUM_SDK,
+  DOCS_MYCELIUM_SDK,
+  CODE_HERO_SECTION,
+};

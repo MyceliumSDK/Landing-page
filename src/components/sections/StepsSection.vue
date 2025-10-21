@@ -45,14 +45,14 @@ const steps = [
   {
     id: 2,
     title: ' Set SDK settings',
-    description: 'Define all necessary SDK and yield settings or use default ones',
+    description:
+      'Define all necessary SDK and yield settings or use default ones',
     icon: iconTemplate(configIconPath, iconsColor),
   },
   {
     id: 3,
     title: 'Start earning',
-    description:
-      'Let a user top up his wallet and start earning yield',
+    description: 'Let a user top up his wallet and start earning yield',
     icon: iconTemplate(walletIconPath, iconsColor),
   },
 ];
