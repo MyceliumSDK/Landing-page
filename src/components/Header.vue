@@ -13,7 +13,7 @@
     </div>
     <div>
       <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary">
-        Check demo
+        Try demo
       </a>
     </div>
   </header>

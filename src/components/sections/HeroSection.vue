@@ -15,7 +15,7 @@
           </p>
           <div class="hero-buttons">
             <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary">
-              Check demo
+              Try demo
             </a>
             <a
               :href="$constants.DOCS_MYCELIUM_SDK"
