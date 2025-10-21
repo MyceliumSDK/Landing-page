@@ -5,12 +5,12 @@
       <div class="features">
         <div class="col">
           <article class="card-small fade-in-up">
-            <h3 class="card-title">{{ features[0].title }}</h3>
-            <p class="card-description">{{ features[0].description }}</p>
-          </article>
-          <article class="card-large fade-in-up">
             <h3 class="card-title">{{ features[2].title }}</h3>
             <p class="card-description">{{ features[2].description }}</p>
+          </article>
+          <article class="card-large fade-in-up">
+            <h3 class="card-title">{{ features[0].title }}</h3>
+            <p class="card-description">{{ features[0].description }}</p>
           </article>
         </div>
         <div class="col">
@@ -32,27 +32,27 @@
 const features = [
   {
     id: 1,
-    title: 'Advanced yield',
+    title: 'Smart yield routing',
     description:
-      'Give users access to curated DeFi strategies with competitive APY and automatic rebalancing logic behind a single call.',
+      'Mycelium\'s protocol router automatically finds the best yield opportunities across supported Web3 protocols — so your users earn more, effortlessly.',
   },
   {
     id: 2,
     title: 'No Web3 expertise required',
     description:
-      'We handle wallets, signing, gas, and protocol routing under the hood. You ship a clean, familiar UX for your users and a simple API for your team.',
+      'Mycelium handles wallets, signing, gas, and protocol routing under the hood — so your users can earn with a single click, and your team never deals with crypto complexity.',
   },
   {
     id: 3,
-    title: 'Open-source core',
+    title: 'Open-source & flexibility',
     description:
-      'MIT-licensed SDK you can audit and extend. Add premium features (analytics, routing policies, priority support) via subscription when you need them.',
+      'Core SDK is open source. Premium add-ons and hosted services available for scaling teams.',
   },
   {
     id: 4,
-    title: 'Quick integration',
+    title: 'Plug-and-earn integration',
     description:
-      'Use the Server SDK or React SDK and go live fast. No wallet plumbing, no protocol juggling, no custom bridges.',
+      'Add yield functionality to your app with one SDK import. Works out-of-the-box for Web2 products, no blockchain setup required.',
   },
 ];
 </script>
@@ -77,8 +77,8 @@ const features = [
 }
 
 .card-small {
-  width: 226px;
-  height: 137px;
+  width: 300px;
+  height: 170px;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 20px;
@@ -89,8 +89,8 @@ const features = [
 }
 
 .card-large {
-  width: 226px;
-  height: 172px;
+  width: 300px;
+  height: 200px;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 20px;
@@ -101,12 +101,12 @@ const features = [
 }
 
 .card-title {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 0.5rem;
 }
 
 .card-description {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 @media (max-width: 520px) {

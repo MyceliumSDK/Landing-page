@@ -105,9 +105,13 @@ onUnmounted(() => {
   .nav-menu {
     display: none;
   }
+  .btn-primary {
+    scale: 1;
+  }
 }
 
 .btn-primary {
-  scale: 0.7;
+  scale: 0.8;
+  padding: 0.5rem 1rem;
 }
 </style>

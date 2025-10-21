@@ -17,6 +17,7 @@
           <div class="founder-bio-container">
             <p class="card-description">{{ founder.bio }}</p>
             <div class="founder-contacts">
+              
               <a
                 :href="founder.github"
                 target="_blank"
@@ -61,7 +62,7 @@
                 >
                   <path :d="icons.telegram" />
                 </svg> -->
-                <span class="contact-link-text">Talk to me</span>
+                <span>Talk to me</span>
               </a>
             </div>
           </div>

@@ -4,14 +4,14 @@
       <div class="hero-content">
         <div class="hero-text fade-in-up">
           <h1 class="hero-title">
-            Turn any app into
+            DeFi yield in your app
             <br />
-            a Web3 yield engine
+            in minutes
           </h1>
           <p class="hero-description">
-            Drop in our SDK and let your users earn with DeFi.
+            Let your users earn from Web3 without ever touching Web3.
             <br />
-            No wallets. No jargon. No headaches.
+            Simple integration, real yield, zero complexity
           </p>
           <div class="hero-buttons">
             <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary">
@@ -26,7 +26,7 @@
             </a>
           </div>
           <span class="secondary-text">
-            MIT-licensed core. Premium add-ons available.
+            Open source core. Premium add-ons available
           </span>
         </div>
         <div class="hero-visual fade-in-up">
@@ -105,7 +105,29 @@ import { CODE_HERO_SECTION } from '@/constants';
   background: transparent !important;
   text-align: left !important;
   border-radius: 16px !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+   border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(30px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: .5px solid transparent;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.05), 
+      rgba(255, 255, 255, 0.05)
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    );
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.6);
   padding: 1.5rem !important;
 }
 
@@ -154,41 +176,92 @@ import { CODE_HERO_SECTION } from '@/constants';
 
 @media (max-width: 768px) {
   .hero {
-    padding: 80px 0 40px;
+    padding: 0;
     height: auto;
+    min-height: 100vh;
+
+    background: radial-gradient(
+        80% 80% at 50% -30%,
+        #6adcff 0%,
+        #2e025d 70%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      var(--primary-bg);
+
+    background-repeat: no-repeat;
+    background-size: 200% 120%;
+    background-position: center top;
   }
 
   .hero-content {
-    gap: 2rem;
     margin-top: 1rem;
+    gap: 3rem;
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 2.5rem);
     line-height: 1.2;
+    margin-bottom: 1rem;
   }
 
   .hero-description {
-    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
   }
 
   .hero-buttons {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .btn {
-    width: 100%;
-    max-width: 280px;
+
+    max-width: 260px;
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .hljs {
+    font-size: 10px !important;
+    padding: 1rem 0.5rem !important;
+    width: min(90vw, 480px);
+    overflow-x: hidden !important;
   }
 
   .code-content pre {
     font-size: 12px;
-    padding: 0.75rem;
-    overflow-x: auto;
     white-space: pre;
-    min-width: max-content;
+    overflow-x: auto;
+  }
+
+  .big-ellipse {
+    top: -70%;
+    width: 140vw;
+    height: 160px;
+    background-size: cover;
+  }
+
+  .small-ellipse {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+  .secondary-text {
+    font-size: 0.875rem;
+    display: block;
+    margin-top: 1rem;
   }
 }
+
 </style>

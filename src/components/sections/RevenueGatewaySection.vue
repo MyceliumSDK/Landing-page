@@ -65,7 +65,7 @@
 }
 
 .revenue-title {
-  font-size: clamp(32px, 4vw, 48px);
+  font-size: 3.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
@@ -73,14 +73,15 @@
 .revenue-text {
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.875rem;
+  font-size: var(--description-size);
 }
 
-@media (max-width: 520px) {
+@media (max-width: 768px) {
   .revenue {
     padding: 0;
   }
   .revenue-bg {
+    top: 35%;
     left: 50%;
   }
   .revenue-content {

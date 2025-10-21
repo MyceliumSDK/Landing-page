@@ -66,9 +66,9 @@ const useCases = [
 
 .usecases-list {
   display: grid;
-  gap: 36px;
-  max-width: 420px;
-  min-width: 320px;
+  gap: 30px;
+  max-width: 500px;
+  min-width: 400px;
 }
 
 .usecases-title {
@@ -80,7 +80,7 @@ const useCases = [
 
 .usecases-description {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: var(--description-size);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -104,15 +104,14 @@ const useCases = [
 }
 
 .safe {
-  width: 92%;
   left: 50%;
-  top: 65%;
-  transform: translate(-50%, -50%);
+  top: 68%;
+  transform: translate(-60%, -50%);
 }
 
 .cardholder {
   width: 45%;
-  left: 0;
+  left: -10%;
   top: 55%;
   transform: rotate(0deg);
   filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.55));
@@ -120,15 +119,15 @@ const useCases = [
 
 .gamepad {
   width: 48%;
-  right: 2%;
-  top: 5%;
+  right: 10%;
+  top: 10%;
   transform: rotate(0deg);
   filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.6));
 }
 
-@media (max-width: 980px) {
+@media (max-width: 768px) {
   .usecases-wrap {
-    grid-template-columns: 1fr;
+    padding: 0 1rem;
     gap: 56px;
   }
   .usecases-left {
@@ -139,18 +138,6 @@ const useCases = [
   }
   .usecases-art {
     width: min(90vw, 560px);
-  }
-}
-
-@media (max-width: 520px) {
-  .usecases {
-    padding: 56px 0 80px;
-  }
-  .usecases-list {
-    gap: 28px;
-  }
-  .usecases-item-desc {
-    font-size: 15px;
   }
 }
 </style>

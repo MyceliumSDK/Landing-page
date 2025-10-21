@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 const iconsColor = '#0099FF';
-const iconsSize = 48;
+const iconsSize = 56;
 const iconsColorSecondary = 'rgba(255, 255, 255, 0.45)';
 
 const serverIconPath =
@@ -38,21 +38,21 @@ const arrowRightUrl = `url("data:image/svg+xml;utf8,${encodeURIComponent(iconTem
 const steps = [
   {
     id: 1,
-    title: 'Install the Server <br> or React SDK',
-    description: 'bun add @mycelium-sdk/core',
+    title: 'Install the SDK',
+    description: 'pnpm add @mycelium-sdk/core',
     icon: iconTemplate(serverIconPath, iconsColor),
   },
   {
     id: 2,
-    title: 'Initialize with your <br> keys & config',
-    description: 'Set default chain, strategy policy, <br> and webhooks.',
+    title: ' Set SDK settings',
+    description: 'Define all necessary SDK and yield settings or use default ones',
     icon: iconTemplate(configIconPath, iconsColor),
   },
   {
     id: 3,
-    title: 'Create a wallet <br> and start earning',
+    title: 'Start earning',
     description:
-      'One call to create/retrieve a user wallet, one call to deposit to a strategy. Withdraw anytime.',
+      'Let a user top up his wallet and start earning yield',
     icon: iconTemplate(walletIconPath, iconsColor),
   },
 ];
@@ -120,6 +120,7 @@ const steps = [
     grid-template-columns: 1fr;
     --grid-gap: 4rem;
     gap: var(--grid-gap);
+    padding: 0 1rem;
   }
   .step:not(:last-child)::after {
     top: auto;
