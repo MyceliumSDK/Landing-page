@@ -4,39 +4,35 @@
       <div class="hero-content">
         <div class="hero-text fade-in-up">
           <h1 class="hero-title">
-            DeFi yield in your app <br />
+            DeFi yield in your app
+            <br />
             in minutes
           </h1>
           <p class="hero-description">
-            Let your users earn from Web3 without ever touching Web3. <br />
+            Let your users earn from Web3 without ever touching Web3.
+            <br />
             Simple integration, real yield, zero complexity
           </p>
           <div class="hero-buttons">
-            <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary"
-              >Check demo</a
-            >
+            <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary" target="_blank">
+              Try demo
+            </a>
             <a
               :href="$constants.DOCS_MYCELIUM_SDK"
               class="btn btn-secondary"
               target="_blank"
-              >Read docs</a
             >
+              Read docs
+            </a>
           </div>
           <span class="secondary-text">
             Open source core. Premium add-ons available
           </span>
         </div>
         <div class="hero-visual fade-in-up">
-          <div class="code-preview">
-            <div class="code-content">
-              <pre><code class="language-typescript">import { MyceliumSDK } from "@mycelium-sdk/core";
-
-const sdk = new MyceliumSDK({...});
-
-const wallet = await sdk.wallet.createWallet("andrew@designer.com");
-
-await wallet.earn("100");</code></pre>
-            </div>
+          <div class="code-content">
+            <div class="big-ellipse"><div class="small-ellipse"></div></div>
+            <highlightjs language="typescript" :code="CODE_HERO_SECTION" />
           </div>
         </div>
       </div>
@@ -45,25 +41,14 @@ await wallet.earn("100");</code></pre>
 </template>
 
 <script setup lang="ts">
-import { onMounted, nextTick } from "vue";
-import hljs from "highlight.js/lib/core";
-import typescript from "highlight.js/lib/languages/typescript";
-import "highlight.js/styles/github-dark.css";
-
-onMounted(() => {
-  hljs.registerLanguage("typescript", typescript);
-  hljs.highlightAll();
-
-  nextTick(() => {
-    hljs.highlightAll();
-  });
-});
+import { CODE_HERO_SECTION } from '@/constants';
 </script>
 
-<style scoped>
+<style>
 .hero {
   padding: 120px 0 80px;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       53.41% 59.46% at 50% 0%,
       #6adcff 0%,
       #2e025d 68.75%,
@@ -117,41 +102,66 @@ onMounted(() => {
 }
 
 .hljs {
-  background: transparent;
+  background: transparent !important;
+  text-align: left !important;
+  border-radius: 16px !important;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(30px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 0.5px solid transparent;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    );
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(255, 255, 255, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.6);
+  padding: 1.5rem !important;
 }
 
-.code-preview {
-  background: var(--card-bg);
-  border-radius: 12px;
-  box-shadow: var(--card-shadow);
-  text-align: left;
-  border: 0.5px solid var(--border-color);
-  max-width: 700px;
+.big-ellipse {
+  position: absolute;
+  top: -100px;
+  z-index: -10;
+  left: 50%;
+  width: 100vw;
+  height: 200px;
+  background-image: url('@images/Ellipse_big.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateX(-50%);
+}
+
+.small-ellipse {
+  position: absolute;
+  z-index: -5;
+  top: 0px;
+  left: 0;
   width: 100%;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(119, 0, 255, 0.3) transparent;
+  height: 100%;
+  background-image: url('@images/Ellipse_small.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.code-preview::-webkit-scrollbar {
-  height: 6px;
-}
-
-.code-preview::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.code-preview::-webkit-scrollbar-thumb {
-  background: rgba(119, 0, 255, 0.3);
-  border-radius: 3px;
-}
-
-.code-preview::-webkit-scrollbar-thumb:hover {
-  background: rgba(119, 0, 255, 0.5);
+.code-content {
+  position: relative;
+  z-index: 1;
 }
 
 .code-content pre {
-  font-family: "Fira Code", "Monaco", "Consolas", monospace;
+  font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
   font-size: 14px;
   line-height: 1.5;
   color: #d4d4d4;
@@ -163,67 +173,91 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .hero {
-    padding: 80px 0 40px;
+    padding: 0;
     height: auto;
+    min-height: 100vh;
+
+    background:
+      radial-gradient(
+        80% 80% at 50% -30%,
+        #6adcff 0%,
+        #2e025d 70%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      var(--primary-bg);
+
+    background-repeat: no-repeat;
+    background-size: 200% 120%;
+    background-position: center top;
   }
 
   .hero-content {
-    gap: 2rem;
     margin-top: 1rem;
+    gap: 3rem;
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 2.5rem);
     line-height: 1.2;
+    margin-bottom: 1rem;
   }
 
   .hero-description {
-    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
   }
 
   .hero-buttons {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .btn {
-    width: 100%;
-    max-width: 280px;
+    max-width: 260px;
   }
 
-  .code-preview {
-    max-width: calc(100vw - 2rem);
-    margin: 0 1rem;
-    overflow-x: auto;
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .hljs {
+    font-size: 10px !important;
+    padding: 1rem 0.5rem !important;
+    width: min(90vw, 480px);
+    overflow-x: hidden !important;
   }
 
   .code-content pre {
     font-size: 12px;
-    padding: 0.75rem;
-    overflow-x: auto;
     white-space: pre;
-    min-width: max-content;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 2rem;
+    overflow-x: auto;
   }
 
-  .hero-description {
-    font-size: 14px;
+  .big-ellipse {
+    top: -70%;
+    width: 140vw;
+    height: 160px;
+    background-size: cover;
   }
 
-  .code-preview {
-    max-width: calc(100vw - 1.5rem);
-    margin: 0 0.5rem;
+  .small-ellipse {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
   }
 
-  .code-content pre {
-    font-size: 11px;
-    padding: 0.5rem;
+  .secondary-text {
+    font-size: 0.875rem;
+    display: block;
+    margin-top: 1rem;
   }
 }
 </style>
