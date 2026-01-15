@@ -3,7 +3,7 @@
     <div class="container">
       <div class="footer-bottom">
         <p class="footer-copyright">
-          © 2024 Mycelium SDK. All rights reserved.
+          © 2026 Mycelium SDK. All rights reserved.
         </p>
         <div class="footer-legal">
           <a href="#" class="footer-link">Privacy Policy</a>

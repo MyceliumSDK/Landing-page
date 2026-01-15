@@ -12,8 +12,8 @@
       <a :href="$constants.DOCS_MYCELIUM_SDK" class="nav-link">Docs</a>
     </div>
     <div>
-      <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary">
-        Try demo
+      <a :href="$constants.API_KEY_FORM_MYCELIUM_SDK" class="btn btn-primary">
+        Get API key
       </a>
     </div>
   </header>

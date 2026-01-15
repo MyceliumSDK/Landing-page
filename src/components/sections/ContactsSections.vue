@@ -76,8 +76,8 @@ const founders = [
   {
     id: 1,
     name: 'Mike Krupin',
-    role: 'Co-Founder & CEO',
-    bio: 'Product at @Blockscout',
+    role: 'Co-Founder & CTO',
+    bio: 'Tech product at @Blockscout',
     avatar: 'https://github.com/0xdeval.png',
     github: 'https://github.com/0xdeval',
     telegram: 'https://t.me/maikyman',
@@ -86,7 +86,7 @@ const founders = [
   {
     id: 2,
     name: 'Vladimir Sabitov',
-    role: 'Co-Founder & CTO',
+    role: 'Co-Founder & CEO',
     bio: 'Full-stack dev at @tezos',
     avatar: 'https://github.com/sstark21.png',
     github: 'https://github.com/sstark21',

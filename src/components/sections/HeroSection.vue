@@ -14,8 +14,12 @@
             Simple integration, real yield, zero complexity
           </p>
           <div class="hero-buttons">
-            <a :href="$constants.DEMO_MYCELIUM_SDK" class="btn btn-primary" target="_blank">
-              Try demo
+            <a
+              :href="$constants.API_KEY_FORM_MYCELIUM_SDK"
+              class="btn btn-primary"
+              target="_blank"
+            >
+              Get API key
             </a>
             <a
               :href="$constants.DOCS_MYCELIUM_SDK"
